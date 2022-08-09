@@ -18,7 +18,7 @@ def getListOfFiles(dirName, optProc, confirmAct='No'):
     totalArch = 0
     totalReadme = 0
     num = 1
-    
+    '''
     ##creating CSV file for report
     today = datetime.today() 
     csvfilename = today.strftime('%d-%m-%Y') + "_Stub_Reports_.csv"
@@ -29,6 +29,7 @@ def getListOfFiles(dirName, optProc, confirmAct='No'):
         if not file_exists:
             csv_writer.writeheader()
     ##end csv
+    '''
     dict_counter = {'Archived_Stubs_Folders':0, 'Stub_Files': 0, 'ReadMe_Files' : 0, 'msg' : 'Stubs ARCHIVED, Read Me process completed', 'FolderPath': dirName, "optProc" : optProc}
     StubFolder_Count = 0
     StubFile_Count = 0
@@ -96,7 +97,7 @@ def getListOfFiles(dirName, optProc, confirmAct='No'):
                         totalArch +=1     
                         # StubFile_Count +=1         
                         dict_counter.update({'Stub_Files':StubFile_Count})          
-                        fields={'S#':num,'Path':dirName,'File Name':entry, 'Date and Time':today.strftime('%d-%m-%Y %H:%M:%S'), 'File Type':'Archive Stubs', 'Status':'Deleted', 'Size':'3KB'}
+                        # fields={'S#':num,'Path':dirName,'File Name':entry, 'Date and Time':today.strftime('%d-%m-%Y %H:%M:%S'), 'File Type':'Archive Stubs', 'Status':'Deleted', 'Size':'3KB'}
                         # # # csv_writer.writerow(fields)
                         num+=1           
                 except Exception as err:
@@ -189,7 +190,7 @@ def getListOfFilesOneLevel(dirName, optProc, confirmAct='No'):
                     totalArch +=1 
                     # StubFile_Count +=1         
                     dict_counter.update({'Stub_Files':StubFile_Count})          
-                    fields={'S#':num,'Path':dirName,'File Name':entry, 'Date and Time':today.strftime('%d-%m-%Y %H:%M:%S'), 'File Type':'Archive Stubs', 'Status':'Deleted', 'Size':'3KB'}
+                    # fields={'S#':num,'Path':dirName,'File Name':entry, 'Date and Time':today.strftime('%d-%m-%Y %H:%M:%S'), 'File Type':'Archive Stubs', 'Status':'Deleted', 'Size':'3KB'}
                     # # # csv_writer.writerow(fields)
                     num+=1           
             except Exception as err:

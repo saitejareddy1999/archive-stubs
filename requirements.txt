@@ -14,5 +14,6 @@ PyQt5-Qt5==5.15.2
 PyQt5-sip==12.11.0
 pywin32==304
 Werkzeug==2.1.2
+wfastcgi==3.0.0
 WTForms==3.0.1
 zipp==3.8.0
